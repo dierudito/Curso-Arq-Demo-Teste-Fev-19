@@ -1,0 +1,12 @@
+﻿<Project TreatAsLocalProperty="TaskFolder;TaskAssembly">
+  
+  <ItemGroup>
+    <SpecFlowGeneratorPlugins Include="$(_SpecFlow_xUnitGeneratorPluginPath)" />
+    <None Include="$(_SpecFlow_xUnitRuntimePluginPath)" >
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+
+</Project>
